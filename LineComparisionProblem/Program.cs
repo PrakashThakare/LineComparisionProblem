@@ -40,13 +40,19 @@ namespace LineComparisionProblem
             Double Length1 = Math.Sqrt(Math.Pow((x2 - x1), 2) + (Math.Pow((y2 - y1), 2)));
             Double Length2 = Math.Sqrt(Math.Pow((x4 - x3), 2) + (Math.Pow((y3 - y4), 2)));
 
-            if (Length1 == Length2)
+            if (Length1 < Length2)
+            {
+                Console.WriteLine("L2 is greter then L1 : " + Length2);
+            }
+
+            else if (Length1 == Length2)
             {
                 Console.WriteLine("Length is Equal : " + Length1);
             }
+
             else
             {
-                Console.WriteLine("Length is Not Equal : " + Length1 + " \n"+ Length2);
+                 Console.WriteLine("L1 is greter then L2 : " + Length1);
             }
 
             Console.ReadLine();
